@@ -1,29 +1,33 @@
 <style>
     html {
-        font-size: 100%;
+        font-size: 40%;
     }
 
     body {
         font-size: 16px;
-        background-color: grey;
+        background-color: rgb(236, 234, 234);
+        font-family: sans-serif;
+        color: black;
+        background: whitesmoke;
     }
 
-    .Principal-Cabecalho-Container {
-        background-color: black;
-        padding: 32px;
+
+    .principal-cabecalho-container {
+        background-color: #13141f;
+        padding: 2rem 0;
         /* 1.6 rem vale 16 pixels */
         margin-bottom: 4rem;
         text-align: center;
     }
 
     .logo-principal {
-        color: white;
+        color: rgb(255, 255, 255);
         text-decoration: none;
     }
 
     .form-buscador {
         border: 1rem solid #ccc;
-        max-width: 45rem;
+        max-width: 50rem;
         margin: 0 auto;
         border-radius: 1rem;
         position: relative;
@@ -40,7 +44,7 @@
 
     .entrada-buscador {
         width: 100%;
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         padding-right: 4rem;
     }
 
@@ -48,28 +52,77 @@
         position: absolute;
         top: 0;
         right: 0;
+        border-radius: 1.5rem;
     }
 
     .botao-buscador:focus {
-        outline: 1px solid #13141f;
+        outline: 1px solid #ffffff;
         background: rgb(255, 255, 255);
     }
 
     .form-buscador:focus-within,
     .botao-buscador {
-        border-color: #13141f;
-        background-color: white;
+        border-color: #181818;
+        background-color: rgb(255, 255, 255);
+    }
+
+    .principal-conteudo-container {
+        padding-top: 0;
     }
 
     .principal-conteudo-lista {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
         gap: 4rem;
-        background: blue;
-
+        background: white;
+        max-width: 64rem;
+        box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.4);
+        transition: all 300ms ease-in-out;
+        transform: scale(1);
     }
 
-    .temp {
-        background: red;
+    .principal-conteudo-lista:hover {
+        box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.6);
+        transform: scale(1.05);
+    }
+
+    .receita-card {
+        max-width: 100%;
+        height: 250px;
+    }
+
+    .receita-card img {
+        width: 100%;
+    }
+
+    receitas.titulo {
+        font-size: 1.4rem;
+        margin: 1.6rem;
+    }
+
+    .receitas-autor {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.6rem;
+        margin: 0 1.6rem 1.6rem 1.6rem;
+        font-size: 1.4rem;
+        color: #555;
+    }
+
+    .receita-meta {
+        display: flex;
+        background: #ccc;
+        padding: 1.6rem 17rem;
+        border-top: black 3px solid;
+        text-align: center;
+    }
+
+    .receitas-footer {
+        text-align: center;
+        margin-top: 0rem;
+        padding-bottom: 2rem;
+        background: #13141f;
+        text-decoration: none;
+        padding: 1.6rem 25.7rem;
     }
 </style>
